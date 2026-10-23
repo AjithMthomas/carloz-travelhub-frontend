@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Background Photography with Atmospheric Vignette */}
       <div className="hero-poster-bg">
         <img
-          src="/images/hero_wayanad_elephants.jpg"
+          src="/images/hero_bg.png"
           alt="Majestic herd of wild Asian elephants crossing the sunlit jungle river in Wayanad, Kerala with rainforest canopy mist"
           className="hero-poster-img"
           fetchPriority="high"
