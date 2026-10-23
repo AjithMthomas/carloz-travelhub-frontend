@@ -15,7 +15,7 @@ export const TopPicks: React.FC<TopPicksProps> = ({
       id: 'kurumbalakotta-hill',
       name: 'KURUMBALAKOTTA',
       category: 'Monolith Sunrise & Cloud Sea',
-      image: '/images/wayanad_sunset_view.jpg',
+      image: '/images/kurumbalakotta_sunrise.jpg',
       price: 'Price on Enquiry'
     },
     {
@@ -43,7 +43,7 @@ export const TopPicks: React.FC<TopPicksProps> = ({
       id: 'en-ooru-village',
       name: 'EN OORU HERITAGE',
       category: 'Tribal Culture Village',
-      image: '/images/bamboo_raft_kuruva.jpg',
+      image: '/images/en_ooru_heritage.jpg',
       price: 'Price on Enquiry'
     },
     {
@@ -64,7 +64,7 @@ export const TopPicks: React.FC<TopPicksProps> = ({
       id: 'karapuzha-dam',
       name: 'KARAPUZHA DAM',
       category: 'Adventure Park & Reservoir',
-      image: '/images/hero_wayanad_river.jpg',
+      image: '/images/karapuzha_dam_park.jpg',
       price: 'Price on Enquiry'
     }
   ];
