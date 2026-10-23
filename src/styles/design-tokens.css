@@ -5,8 +5,15 @@
   --bg-surface-warm: #F4EFE6;
   --bg-card: #FFFFFF;
   --bg-card-muted: #F8F6F0;
-  --bg-glass-light: rgba(255, 255, 255, 0.85);
-  --bg-glass-dark: rgba(15, 29, 21, 0.78);
+  --bg-glass-light: rgba(255, 255, 255, 0.88);
+  --bg-glass-dark: rgba(14, 28, 20, 0.75);
+  --bg-glass-card: rgba(255, 255, 255, 0.93);
+  --glass-border-light: rgba(255, 255, 255, 0.7);
+  --glass-border-dark: rgba(255, 255, 255, 0.22);
+  --glass-blur-sm: blur(10px);
+  --glass-blur-md: blur(18px);
+  --glass-blur-lg: blur(28px) saturate(185%);
+  --glass-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
   
   /* Text & Contrast */
   --text-headline: #0F1D15;

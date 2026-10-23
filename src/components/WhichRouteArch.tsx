@@ -28,7 +28,7 @@ export const WhichRouteArch: React.FC<WhichRouteArchProps> = ({ onSelectRoute })
   ];
 
   return (
-    <section className="section doorways-section" id="routes" style={{ background: '#FAF8F5' }}>
+    <section className="section doorways-section section-which-route" id="routes">
       <div className="container">
         <h2 className="doorways-title">
           WHICH ROUTE ARE YOU GONNA CHOOSE?

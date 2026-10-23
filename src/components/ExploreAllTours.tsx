@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PACKAGES, buildWhatsAppUrl } from '../config/brand';
-import { MessageCircle, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface ExploreAllToursProps {
   onSelectPackageForPlanner: (packageName: string) => void;
@@ -28,7 +29,7 @@ export const ExploreAllTours: React.FC<ExploreAllToursProps> = ({
       });
 
   return (
-    <section className="section tours-section" id="tours">
+    <section className="section tours-section section-explore-tours" id="tours">
       <div className="container">
         {/* Giant Centered Headline (Cloned from Reference 2 Page 2) */}
         <div className="tours-hero-banner">
@@ -91,7 +92,7 @@ export const ExploreAllTours: React.FC<ExploreAllToursProps> = ({
                     style={{ flex: 1.2 }}
                     title="Enquire on WhatsApp"
                   >
-                    <MessageCircle size={14} />
+                    <WhatsAppIcon variant="monochrome" size={14} />
                     <span>WhatsApp</span>
                   </a>
                 </div>

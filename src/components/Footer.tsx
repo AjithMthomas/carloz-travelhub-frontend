@@ -1,6 +1,7 @@
 import React from 'react';
 import { BRAND, buildWhatsAppUrl } from '../config/brand';
-import { MessageCircle, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 const InstagramIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -77,9 +78,9 @@ export const Footer: React.FC = () => {
                 href={buildWhatsAppUrl('6238813608')}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.85rem', background: 'rgba(37, 211, 102, 0.08)', border: '1px solid rgba(37, 211, 102, 0.25)', borderRadius: 'var(--radius-pill)', color: '#128c7e', fontSize: '0.82rem', fontWeight: 600 }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.45rem 0.85rem', background: 'rgba(37, 211, 102, 0.08)', border: '1px solid rgba(37, 211, 102, 0.25)', borderRadius: 'var(--radius-pill)', color: '#128c7e', fontSize: '0.82rem', fontWeight: 600 }}
               >
-                <MessageCircle size={14} color="#25d366" />
+                <WhatsAppIcon variant="original" size={18} />
                 <span>Desk 1: +91 62388 13608</span>
               </a>
 
@@ -87,9 +88,9 @@ export const Footer: React.FC = () => {
                 href={buildWhatsAppUrl('8157845547')}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0.85rem', background: 'rgba(37, 211, 102, 0.08)', border: '1px solid rgba(37, 211, 102, 0.25)', borderRadius: 'var(--radius-pill)', color: '#128c7e', fontSize: '0.82rem', fontWeight: 600 }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.45rem 0.85rem', background: 'rgba(37, 211, 102, 0.08)', border: '1px solid rgba(37, 211, 102, 0.25)', borderRadius: 'var(--radius-pill)', color: '#128c7e', fontSize: '0.82rem', fontWeight: 600 }}
               >
-                <MessageCircle size={14} color="#25d366" />
+                <WhatsAppIcon variant="original" size={18} />
                 <span>Desk 2: +91 81578 45547</span>
               </a>
             </div>

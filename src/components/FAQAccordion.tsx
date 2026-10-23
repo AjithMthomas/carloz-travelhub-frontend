@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FAQS, buildWhatsAppUrl } from '../config/brand';
-import { ChevronDown, MessageCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FAQAccordion: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>('faq-1');
@@ -10,7 +11,7 @@ export const FAQAccordion: React.FC = () => {
   };
 
   return (
-    <section className="section" id="faqs" style={{ background: '#FAF8F5' }}>
+    <section className="section section-faqs" id="faqs">
       <div className="container">
         {/* Two-Column FAQ Layout (Cloned from Reference 2 Page 2) */}
         <div className="faqs-layout">
@@ -33,9 +34,10 @@ export const FAQAccordion: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-terracotta"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}
             >
-              <MessageCircle size={18} />
-              <span>Contact Us</span>
+              <WhatsAppIcon variant="monochrome" size={18} />
+              <span>Contact Us on WhatsApp</span>
             </a>
           </div>
 

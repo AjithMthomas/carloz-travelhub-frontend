@@ -1,7 +1,8 @@
 import React from 'react';
 import type { Destination } from '../types';
 import { buildWhatsAppUrl } from '../config/brand';
-import { X, Compass, Sparkles, MessageCircle } from 'lucide-react';
+import { X, Compass, Sparkles } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface DestinationModalProps {
   destination: Destination | null;
@@ -103,7 +104,7 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
               rel="noopener noreferrer"
               className="btn btn-whatsapp"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon variant="monochrome" size={18} />
               <span>Enquire About {destination.name}</span>
             </a>
           </div>

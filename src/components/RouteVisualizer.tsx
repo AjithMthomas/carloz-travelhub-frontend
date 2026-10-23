@@ -14,7 +14,7 @@ export const RouteVisualizer: React.FC = () => {
   const currentStep = CHURAM_STORY_STEPS[activeStage];
 
   return (
-    <section className="section" style={{ background: '#ffffff', borderTop: '1px solid var(--border-light)' }}>
+    <section className="section section-route-visualizer" id="churam-visualizer">
       <div className="container">
         <div className="section-header">
           <div className="badge-pill">
@@ -29,39 +29,41 @@ export const RouteVisualizer: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ background: 'var(--bg-surface-warm)', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-lg)', padding: 'clamp(1.5rem, 4vw, 3rem)' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2.5rem', alignItems: 'center' }}>
-            <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', aspectRatio: '16 / 10', boxShadow: 'var(--shadow-card)', border: '1px solid var(--border-light)' }}>
+        <div className="route-vis-card">
+          <div className="route-vis-split">
+            <div className="route-vis-img-wrap">
               <img
                 src={stageImages[activeStage]}
                 alt={currentStep.name}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'all 400ms ease' }}
+                className="route-vis-img"
               />
             </div>
 
-            <div>
-              <span style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--color-terracotta)', letterSpacing: '0.1em' }}>
+            <div className="route-vis-details">
+              <span className="route-vis-badge">
                 Stage {currentStep.step} / 04 • {currentStep.highlight}
               </span>
 
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-headline)', margin: '0.5rem 0 1rem 0' }}>
+              <h3 className="route-vis-step-title">
                 {currentStep.name}
               </h3>
 
-              <p style={{ fontSize: '0.96rem', color: 'var(--text-muted)', lineHeight: '1.65', marginBottom: '1.5rem' }}>
+              <p className="route-vis-step-desc">
                 {currentStep.desc}
               </p>
 
-              <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <div className="route-vis-nav-btns">
                 <button
                   onClick={() => setActiveStage((prev) => (prev > 0 ? prev - 1 : 3))}
                   className="btn btn-outline btn-sm"
+                  aria-label="Previous mountain stage"
                 >
                   ← Previous Stage
                 </button>
                 <button
                   onClick={() => setActiveStage((prev) => (prev < 3 ? prev + 1 : 0))}
                   className="btn btn-terracotta btn-sm"
+                  aria-label="Next mountain stage"
                 >
                   Next Stage →
                 </button>
@@ -69,28 +71,23 @@ export const RouteVisualizer: React.FC = () => {
             </div>
           </div>
 
-          {/* Stepper Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2.5rem' }}>
+          {/* Stepper Grid (Responsive on Mobile) */}
+          <div className="route-vis-stepper-grid">
             {CHURAM_STORY_STEPS.map((s, idx) => (
-              <div
+              <button
+                type="button"
                 key={s.step}
                 onClick={() => setActiveStage(idx)}
-                style={{
-                  padding: '1.15rem 1rem',
-                  background: activeStage === idx ? '#ffffff' : 'transparent',
-                  border: activeStage === idx ? '2px solid var(--color-terracotta)' : '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-sm)',
-                  cursor: 'pointer',
-                  transition: 'all 200ms ease'
-                }}
+                className={`route-vis-step-card ${activeStage === idx ? 'active' : ''}`}
+                aria-pressed={activeStage === idx}
               >
-                <span style={{ fontFamily: 'var(--font-monumental)', fontSize: '1.4rem', fontWeight: 800, color: activeStage === idx ? 'var(--color-terracotta)' : 'var(--text-muted)' }}>
+                <span className="route-vis-step-num">
                   {s.step}
                 </span>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-headline)', margin: '0.25rem 0' }}>
+                <h4 className="route-vis-step-name">
                   {s.name}
                 </h4>
-              </div>
+              </button>
             ))}
           </div>
         </div>

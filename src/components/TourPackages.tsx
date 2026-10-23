@@ -1,6 +1,7 @@
 import React from 'react';
 import { PACKAGES, buildWhatsAppUrl } from '../config/brand';
-import { Check, Clock, MessageCircle, Navigation, Send } from 'lucide-react';
+import { Check, Clock, Navigation, Send } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface TourPackagesProps {
   onSelectPackageForEnquiry: (packageName: string) => void;
@@ -100,7 +101,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackageForEn
                       className="btn btn-whatsapp btn-sm"
                       title="Enquire directly on WhatsApp"
                     >
-                      <MessageCircle size={15} />
+                      <WhatsAppIcon variant="monochrome" size={15} />
                       <span>WhatsApp</span>
                     </a>
                   </div>

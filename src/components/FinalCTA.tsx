@@ -1,6 +1,7 @@
 import React from 'react';
 import { buildWhatsAppUrl } from '../config/brand';
-import { Compass, MessageCircle, Phone } from 'lucide-react';
+import { Compass, Phone } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface FinalCTAProps {
   onPlanTripClick: () => void;
@@ -50,7 +51,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onPlanTripClick }) => {
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-lg"
             >
-              <MessageCircle size={20} />
+              <WhatsAppIcon variant="monochrome" size={20} />
               <span>Chat on WhatsApp (+91 62388 13608)</span>
             </a>
 

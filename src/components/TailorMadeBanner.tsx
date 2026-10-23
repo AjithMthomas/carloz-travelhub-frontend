@@ -1,6 +1,6 @@
 import React from 'react';
 import { buildWhatsAppUrl } from '../config/brand';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface TailorMadeBannerProps {
   onPlanTripClick: () => void;
@@ -8,7 +8,7 @@ interface TailorMadeBannerProps {
 
 export const TailorMadeBanner: React.FC<TailorMadeBannerProps> = ({ onPlanTripClick }) => {
   return (
-    <section className="section" style={{ paddingTop: 0, paddingBottom: 'clamp(4rem, 7vw, 6rem)', background: '#FAF8F5' }}>
+    <section className="section section-tailor-made" style={{ paddingTop: 0, paddingBottom: 'clamp(4rem, 7vw, 6rem)' }}>
       <div className="container">
         {/* Sunset Card (Cloned from Reference 2 Page 2 Bottom) */}
         <div className="tailor-made-card">
@@ -39,7 +39,7 @@ export const TailorMadeBanner: React.FC<TailorMadeBannerProps> = ({ onPlanTripCl
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
               >
-                <MessageCircle size={16} />
+                <WhatsAppIcon variant="monochrome" size={17} />
                 <span>WhatsApp Desk</span>
               </a>
             </div>

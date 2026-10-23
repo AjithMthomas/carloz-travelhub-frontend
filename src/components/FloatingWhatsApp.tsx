@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { buildWhatsAppUrl } from '../config/brand';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -10,9 +11,12 @@ export const FloatingWhatsApp: React.FC = () => {
       {open && (
         <div className="floating-wa-menu" role="dialog" aria-label="Choose WhatsApp Desk">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--border-light)', paddingBottom: '0.45rem' }}>
-            <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.92rem', fontWeight: 800, color: 'var(--text-headline)' }}>
-              Chat with CARLOZ
-            </span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+              <WhatsAppIcon variant="original" size={20} />
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.92rem', fontWeight: 800, color: 'var(--text-headline)' }}>
+                Chat with CARLOZ
+              </span>
+            </div>
             <button
               onClick={() => setOpen(false)}
               style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
@@ -29,9 +33,7 @@ export const FloatingWhatsApp: React.FC = () => {
             className="floating-wa-option"
             onClick={() => setOpen(false)}
           >
-            <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#25d366', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <MessageCircle size={16} />
-            </div>
+            <WhatsAppIcon variant="original" size={34} />
             <div>
               <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', display: 'block' }}>Desk 1 (Primary)</span>
               <span style={{ fontSize: '0.86rem', fontWeight: 700, color: '#128c7e' }}>+91 62388 13608</span>
@@ -45,9 +47,7 @@ export const FloatingWhatsApp: React.FC = () => {
             className="floating-wa-option"
             onClick={() => setOpen(false)}
           >
-            <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#25d366', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <MessageCircle size={16} />
-            </div>
+            <WhatsAppIcon variant="original" size={34} />
             <div>
               <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', display: 'block' }}>Desk 2 (Coordinator)</span>
               <span style={{ fontSize: '0.86rem', fontWeight: 700, color: '#128c7e' }}>+91 81578 45547</span>
@@ -62,7 +62,7 @@ export const FloatingWhatsApp: React.FC = () => {
         aria-label="Open WhatsApp options"
         title="Chat on WhatsApp"
       >
-        {open ? <X size={24} /> : <MessageCircle size={26} />}
+        {open ? <X size={24} /> : <WhatsAppIcon variant="monochrome" size={28} color="#ffffff" />}
       </button>
     </aside>
   );

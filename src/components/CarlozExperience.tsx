@@ -1,6 +1,7 @@
 import React from 'react';
 import { VEHICLE_DETAILS, buildWhatsAppUrl } from '../config/brand';
-import { Compass, Music, Luggage, Users, MessageCircle } from 'lucide-react';
+import { Compass, Music, Luggage, Users } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface CarlozExperienceProps {
   onPlanTripClick: () => void;
@@ -87,7 +88,7 @@ export const CarlozExperience: React.FC<CarlozExperienceProps> = ({ onPlanTripCl
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
               >
-                <MessageCircle size={18} />
+                <WhatsAppIcon variant="monochrome" size={18} />
                 <span>Check Van Availability</span>
               </a>
             </div>

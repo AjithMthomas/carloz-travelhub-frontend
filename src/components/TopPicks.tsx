@@ -42,7 +42,7 @@ export const TopPicks: React.FC<TopPicksProps> = ({
   ];
 
   return (
-    <section className="section picks-section" id="destinations">
+    <section className="section picks-section section-destinations" id="destinations">
       <div className="container">
         <div className="section-header">
           <div className="badge-pill">

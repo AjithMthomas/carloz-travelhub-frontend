@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { buildWhatsAppUrl } from '../config/brand';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface HeaderProps {
   onPlanTripClick: () => void;
@@ -56,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ onPlanTripClick }) => {
                 className="btn btn-whatsapp btn-sm"
                 title="Chat on WhatsApp (+91 6238813608)"
               >
-                <MessageCircle size={15} />
+                <WhatsAppIcon variant="monochrome" size={16} />
                 <span>WhatsApp</span>
               </a>
 
@@ -133,16 +134,20 @@ export const Header: React.FC<HeaderProps> = ({ onPlanTripClick }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-sm"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
             >
-              Desk 1 (+91 62388 13608)
+              <WhatsAppIcon variant="monochrome" size={15} />
+              <span>Desk 1</span>
             </a>
             <a
               href={buildWhatsAppUrl('8157845547')}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-sm"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
             >
-              Desk 2 (+91 81578 45547)
+              <WhatsAppIcon variant="monochrome" size={15} />
+              <span>Desk 2</span>
             </a>
           </div>
         </div>

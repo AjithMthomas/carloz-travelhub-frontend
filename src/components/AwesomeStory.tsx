@@ -7,7 +7,7 @@ interface AwesomeStoryProps {
 
 export const AwesomeStory: React.FC<AwesomeStoryProps> = ({ onPlanTripClick }) => {
   return (
-    <section className="section" style={{ background: '#FAF8F5' }}>
+    <section className="section section-awesome-story" id="story">
       <div className="container">
         <div className="awesome-story-grid">
           {/* Left Column: Narrative & Stats Row (Reference 2 Layout) */}

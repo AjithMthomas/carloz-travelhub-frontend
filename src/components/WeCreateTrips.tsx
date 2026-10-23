@@ -7,7 +7,7 @@ interface WeCreateTripsProps {
 
 export const WeCreateTrips: React.FC<WeCreateTripsProps> = ({ onPlanTripClick }) => {
   return (
-    <section className="section create-trips-section" id="about-us">
+    <section className="section create-trips-section section-we-create" id="about-us">
       <div className="container">
         <div className="create-trips-grid">
           {/* Left Column: Authentic Travel Photo (Reference 2 Left Side) */}

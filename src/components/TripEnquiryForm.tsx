@@ -3,9 +3,9 @@ import type { TripEnquiryData } from '../types';
 import { buildWhatsAppUrl } from '../config/brand';
 import {
   ArrowRight,
-  ArrowLeft,
-  MessageCircle
+  ArrowLeft
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface TripEnquiryFormProps {
   initialPackage?: string;
@@ -110,7 +110,7 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
   const progressPercent = ((currentStep - 1) / 3) * 100;
 
   return (
-    <section className="section" id="planner" style={{ background: '#FAF8F5' }}>
+    <section className="section section-planner" id="planner">
       <div className="container-narrow">
         <div className="section-header">
           <div className="badge-pill">
@@ -343,7 +343,7 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
                   style={{ padding: '1rem', flexDirection: 'column', gap: '0.2rem' }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <MessageCircle size={18} />
+                    <WhatsAppIcon variant="monochrome" size={19} />
                     <span>Desk 1 (+91 62388 13608)</span>
                   </div>
                   <span style={{ fontSize: '0.75rem', opacity: 0.9 }}>Primary Travel Desk</span>
@@ -356,7 +356,7 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
                   style={{ padding: '1rem', flexDirection: 'column', gap: '0.2rem' }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <MessageCircle size={18} />
+                    <WhatsAppIcon variant="monochrome" size={19} />
                     <span>Desk 2 (+91 81578 45547)</span>
                   </div>
                   <span style={{ fontSize: '0.75rem', opacity: 0.9 }}>Tour Coordinator</span>
