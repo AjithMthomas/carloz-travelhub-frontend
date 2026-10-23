@@ -63,7 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="hero-bottom-info-pill">
           <div className="hero-pill-call-group">
             <div className="hero-pill-call-label">
-              <WhatsAppIcon variant="original" size={18} />
+              <WhatsAppIcon variant="original" size={20} />
               <span className="hero-pill-wa-title">WhatsApp:</span>
             </div>
             <div className="hero-pill-phone-links">
@@ -91,7 +91,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <div className="hero-pill-meta">
             <div className="hero-pill-location">
-              <MapPin size={13} color="var(--color-terracotta)" />
+              <MapPin size={14} color="var(--color-terracotta)" />
               <span>Wayanad, Kerala</span>
             </div>
             <span className="divider-dot">•</span>
@@ -106,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="btn btn-hero-explore btn-sm"
               aria-label="Explore tours and packages"
             >
-              <Compass size={13} />
+              <Compass size={15} />
               <span>Explore</span>
             </button>
             <button
