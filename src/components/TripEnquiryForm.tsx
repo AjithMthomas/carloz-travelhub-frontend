@@ -286,7 +286,7 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
                 Enter your details to generate your prefilled enquiry directly on WhatsApp.
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
+              <div className="planner-name-phone-grid">
                 <div className="form-group">
                   <label className="form-label" htmlFor="user-name">Your Name *</label>
                   <input
@@ -321,45 +321,48 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
               </div>
 
               {/* Review Overview */}
-              <div style={{ background: 'var(--bg-surface-warm)', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)', padding: '1.25rem', marginBottom: '1.75rem' }}>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-headline)', marginBottom: '0.65rem' }}>
-                  Trip Summary
-                </h4>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', fontSize: '0.86rem' }}>
-                  <div><strong>Style:</strong> {formData.tripType}</div>
-                  <div><strong>Group:</strong> {formData.travellerCount}</div>
-                  <div><strong>Duration:</strong> {formData.duration}</div>
-                  <div><strong>Sights:</strong> {formData.destinations.join(', ')}</div>
+              <div className="planner-summary-card">
+                <h4 className="planner-summary-title">Trip Summary</h4>
+                <div className="planner-summary-grid">
+                  <div className="planner-summary-item"><strong>Style:</strong> {formData.tripType || 'Custom Tour'}</div>
+                  <div className="planner-summary-item"><strong>Group:</strong> {formData.travellerCount || '2 Travellers'}</div>
+                  <div className="planner-summary-item"><strong>Duration:</strong> {formData.duration || '2 Nights / 3 Days'}</div>
+                  {formData.travelDate && (
+                    <div className="planner-summary-item"><strong>Dates:</strong> {formData.travelDate}</div>
+                  )}
+                  <div className="planner-summary-item planner-summary-sights">
+                    <strong>Sights:</strong> {formData.destinations.length > 0 ? formData.destinations.join(', ') : 'Wayanad Highlights'}
+                  </div>
                 </div>
               </div>
 
               {/* Dual WhatsApp Buttons */}
-              <label className="form-label">Select WhatsApp Desk to Send:</label>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <label className="form-label" style={{ marginBottom: '0.65rem' }}>
+                Select WhatsApp Desk to Send:
+              </label>
+              <div className="planner-desk-buttons-grid">
                 <button
                   type="button"
                   onClick={() => sendWhatsApp('6238813608')}
-                  className="btn btn-whatsapp"
-                  style={{ padding: '1rem', flexDirection: 'column', gap: '0.2rem' }}
+                  className="btn btn-whatsapp planner-desk-btn"
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <WhatsAppIcon variant="monochrome" size={19} />
-                    <span>Desk 1 (+91 62388 13608)</span>
+                  <div className="planner-desk-btn-main">
+                    <WhatsAppIcon variant="monochrome" size={20} />
+                    <span className="planner-desk-btn-title">Desk 1 (+91 62388 13608)</span>
                   </div>
-                  <span style={{ fontSize: '0.75rem', opacity: 0.9 }}>Primary Travel Desk</span>
+                  <span className="planner-desk-btn-sub">Primary Travel Desk</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => sendWhatsApp('8157845547')}
-                  className="btn btn-whatsapp"
-                  style={{ padding: '1rem', flexDirection: 'column', gap: '0.2rem' }}
+                  className="btn btn-whatsapp planner-desk-btn"
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <WhatsAppIcon variant="monochrome" size={19} />
-                    <span>Desk 2 (+91 81578 45547)</span>
+                  <div className="planner-desk-btn-main">
+                    <WhatsAppIcon variant="monochrome" size={20} />
+                    <span className="planner-desk-btn-title">Desk 2 (+91 81578 45547)</span>
                   </div>
-                  <span style={{ fontSize: '0.75rem', opacity: 0.9 }}>Tour Coordinator</span>
+                  <span className="planner-desk-btn-sub">Tour Coordinator</span>
                 </button>
               </div>
 

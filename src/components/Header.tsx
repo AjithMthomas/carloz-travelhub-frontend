@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ onPlanTripClick }) => {
         <div className="container-wide">
           <div className="nav-wrapper">
             <a href="#" className="brand-link" aria-label="CARLOZ Travel Hub Home">
-              <div>
+              <div className="brand-text-wrap">
                 <span className="brand-title">
                   CARLOZ <span>|</span> TRAVEL HUB
                 </span>
@@ -49,21 +49,21 @@ export const Header: React.FC<HeaderProps> = ({ onPlanTripClick }) => {
               ))}
             </nav>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <div className="header-actions">
               <a
                 href={buildWhatsAppUrl('6238813608')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp btn-sm"
+                className="btn btn-whatsapp btn-sm header-wa-btn"
                 title="Chat on WhatsApp (+91 6238813608)"
               >
                 <WhatsAppIcon variant="monochrome" size={16} />
-                <span>WhatsApp</span>
+                <span className="header-wa-text">WhatsApp</span>
               </a>
 
               <button
                 onClick={onPlanTripClick}
-                className="btn btn-terracotta btn-sm"
+                className="btn btn-terracotta btn-sm header-plan-btn"
               >
                 Plan Trip
               </button>
