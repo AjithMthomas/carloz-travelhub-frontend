@@ -588,7 +588,7 @@ button, input, select, textarea {
 
 .hero-monumental-title {
   font-family: var(--font-monumental);
-  font-size: clamp(2.2rem, 7.2vw, 6.2rem);
+  font-size: clamp(3.5rem, 10vw, 8.5rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: 0.04em;
@@ -2447,8 +2447,8 @@ html, body, #root, .app-root {
   }
 
   .hero-monumental-title {
-    font-size: clamp(1.85rem, 8.5vw, 3.2rem) !important;
-    letter-spacing: 0.02em !important;
+    font-size: clamp(2.4rem, 11vw, 4.6rem) !important;
+    letter-spacing: 0.03em !important;
     white-space: nowrap !important;
     text-align: center !important;
     width: 100% !important;
@@ -2907,7 +2907,7 @@ html, body, #root, .app-root {
   }
 
   .hero-monumental-title {
-    font-size: clamp(1.65rem, 8.2vw, 2.4rem) !important;
+    font-size: clamp(2.2rem, 10.5vw, 3.2rem) !important;
   }
 
   .planner-desk-btn-title {
