@@ -62,7 +62,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Bottom Floating Info Pill (Glassmorphic Bar with Official WhatsApp Icon) */}
         <div className="hero-bottom-info-pill">
           <div className="hero-pill-call-group">
-            <WhatsAppIcon variant="original" size={24} />
+            <WhatsAppIcon variant="original" size={20} />
             <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>WhatsApp:</span>
             <a
               href={buildWhatsAppUrl('6238813608')}
