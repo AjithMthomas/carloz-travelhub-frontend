@@ -102,7 +102,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="btn btn-hero-explore btn-sm"
               aria-label="Explore tours and packages"
             >
-              <Compass size={15} />
+              <Compass size={14} />
               <span>Explore</span>
             </button>
             <button

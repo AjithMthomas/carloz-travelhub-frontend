@@ -56,10 +56,14 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
   const spots = [
     'Banasura Sagar Dam',
     'Chembra Peak & Heart Lake',
+    'Kurumbalakotta Sunrise Hilltop',
+    '900 Kandi Glass Bridge',
     'Soochipara Waterfalls',
     'Edakkal Caves',
     'Kuruvadweep Bamboo Rafting',
+    'En Ooru Tribal Heritage Village',
     'Lakkidi & Churam Viewpoint',
+    'Karapuzha Dam Adventure Park',
     'Meppadi Tea Valleys'
   ];
 
@@ -113,10 +117,6 @@ export const TripEnquiryForm: React.FC<TripEnquiryFormProps> = ({
     <section className="section section-planner" id="planner">
       <div className="container-narrow">
         <div className="section-header">
-          <div className="badge-pill">
-            <span className="dot" />
-            <span>Interactive Trip Planner</span>
-          </div>
           <h2 className="section-title">
             Plan Your Wayanad <em>Journey.</em>
           </h2>

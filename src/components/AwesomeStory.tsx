@@ -12,11 +12,6 @@ export const AwesomeStory: React.FC<AwesomeStoryProps> = ({ onPlanTripClick }) =
         <div className="awesome-story-grid">
           {/* Left Column: Narrative & Stats Row (Reference 2 Layout) */}
           <div>
-            <div className="badge-pill">
-              <span className="dot" />
-              <span>Western Ghats Soul</span>
-            </div>
-
             <h2 className="section-title">
               Awesome <em>Wayanad.</em>
             </h2>

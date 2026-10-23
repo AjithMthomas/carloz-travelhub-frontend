@@ -28,8 +28,8 @@ export const BRAND = {
   },
 
   social: {
-    instagram: 'https://instagram.com/carloz_travel_hub',
-    instagramHandle: '@carloz_travel_hub'
+    instagram: 'https://www.instagram.com/carloz__travelhub/',
+    instagramHandle: '@carloz__travelhub'
   },
 
   about: {
@@ -130,6 +130,62 @@ export const DESTINATIONS: Destination[] = [
     altitude: '700 meters',
     idealDuration: '1 to 2 hours',
     location: 'Vythiri, Wayanad'
+  },
+  {
+    id: 'kurumbalakotta-hilltop',
+    name: 'Kurumbalakotta Hill Top',
+    malayalamName: 'കുറുമ്പാലക്കോട്ട',
+    tagline: 'Legendary monolith summit overlooking a 360° golden ocean of clouds at dawn',
+    category: 'mountain',
+    image: '/images/wayanad_sunset_view.jpg',
+    description: 'A striking monolith hillock rising 3,220 feet above sea level. Kurumbalakotta offers one of South India’s most awe-inspiring sunrise spectacles, where trekkers stand above a sea of swirling morning mist, watching the sun break over the distant Chembra and Banasura mountain ranges.',
+    highlights: ['360-degree panoramic sunrise', 'Endless sea of clouds (Koda Manju)', 'Trek through rural Wayanad trails', 'Stunning drone & photography point'],
+    bestTime: 'September to March (Early morning 5:30 AM sunrise)',
+    altitude: '3,220 feet (980 meters)',
+    idealDuration: '3 to 4 hours (Sunrise trek)',
+    location: 'Panamaram / Kottathara, Wayanad'
+  },
+  {
+    id: 'kandi-900',
+    name: '900 Kandi Glass Bridge & Eco Park',
+    malayalamName: 'തൊള്ളായിരം കണ്ടി',
+    tagline: 'Thrilling glass skywalk suspended over primeval rainforest canopy and mist',
+    category: 'viewpoint',
+    image: '/images/tea_plantation_mist.jpg',
+    description: 'Deep inside the secluded 900-acre estate of Thollayiram Kandi, this sensational cantilever glass bridge extends out into thin air above towering mahogany trees and waterfalls. Accessible by a rugged off-road jungle drive, it is an adrenaline-packed eco-paradise.',
+    highlights: ['Cantilever transparent glass skywalk', 'Off-road jeep trail through forest', 'Giant tree swing & sky hammock', 'Pristine mountain streams'],
+    bestTime: 'October to May',
+    altitude: '1,100 meters',
+    idealDuration: '3 to 4 hours',
+    location: 'Meppadi, Wayanad'
+  },
+  {
+    id: 'en-ooru-village',
+    name: 'En Ooru Tribal Heritage Village',
+    malayalamName: 'എൻ ഊര്',
+    tagline: 'Kerala’s first tribal heritage village celebrating indigenous architecture & lore',
+    category: 'heritage',
+    image: '/images/bamboo_raft_kuruva.jpg',
+    description: 'Nestled on the misty slopes of Pookode in Vythiri, En Ooru showcases traditional tribal life, mud and thatched cottages, organic indigenous farming, and tribal craft workshops. A serene cultural journey that honors Wayanad’s ancient custodians.',
+    highlights: ['Traditional tribal thatched architecture', 'Artisan bamboo & pottery workshops', 'Authentic tribal cuisine & herbal tea', 'Misty hillside village strolls'],
+    bestTime: 'All year round (especially monsoon & winter)',
+    altitude: '800 meters',
+    idealDuration: '2 to 3 hours',
+    location: 'Pookode, Vythiri, Wayanad'
+  },
+  {
+    id: 'karapuzha-dam',
+    name: 'Karapuzha Dam & Adventure Park',
+    malayalamName: 'കാരപ്പുഴ അണക്കെട്ട്',
+    tagline: 'Picturesque earthen reservoir with thrilling zipline and scenic waterfront gardens',
+    category: 'lake',
+    image: '/images/banasura_sagar_dam.jpg',
+    description: 'One of the largest earth dams in India, Karapuzha is bordered by gentle green hills, expansive rose gardens, and a thrilling adventure park featuring one of the region’s longest ziplines spanning directly across the shimmering reservoir waters.',
+    highlights: ['Lakeside canopy zipline', 'Scenic promenade & landscaped lawns', 'Children adventure park', 'Sunset boating views'],
+    bestTime: 'September to April',
+    altitude: '780 meters',
+    idealDuration: '2 to 3 hours',
+    location: 'Vazhavatta, Wayanad'
   }
 ];
 

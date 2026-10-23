@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({ onPlanTripClick }) => {
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
               >
-                <Menu size={20} />
+                <Menu size={16} />
               </button>
             </div>
           </div>

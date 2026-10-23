@@ -22,11 +22,6 @@ export const WeCreateTrips: React.FC<WeCreateTripsProps> = ({ onPlanTripClick })
 
           {/* Right Column: Editorial Text & 3 Pill Features (Reference 2 Right Side) */}
           <div className="create-trips-content">
-            <div className="badge-pill" style={{ alignSelf: 'flex-start' }}>
-              <span className="dot" />
-              <span>Our Philosophy</span>
-            </div>
-
             <h2 className="create-trips-title">
               We create the trips <em>you love.</em>
             </h2>

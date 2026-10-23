@@ -12,10 +12,17 @@ export const TopPicks: React.FC<TopPicksProps> = ({
 }) => {
   const picks = [
     {
-      id: 'churam-pass',
-      name: 'CHURAM DRIVE',
-      category: 'Ghat Mountain Pass',
+      id: 'kurumbalakotta-hill',
+      name: 'KURUMBALAKOTTA',
+      category: 'Monolith Sunrise & Cloud Sea',
       image: '/images/wayanad_sunset_view.jpg',
+      price: 'Price on Enquiry'
+    },
+    {
+      id: 'kandi-900',
+      name: '900 KANDI GLASS BRIDGE',
+      category: 'Rainforest Skywalk & Eco Park',
+      image: '/images/tea_plantation_mist.jpg',
       price: 'Price on Enquiry'
     },
     {
@@ -33,10 +40,31 @@ export const TopPicks: React.FC<TopPicksProps> = ({
       price: 'Price on Enquiry'
     },
     {
+      id: 'en-ooru-village',
+      name: 'EN OORU HERITAGE',
+      category: 'Tribal Culture Village',
+      image: '/images/bamboo_raft_kuruva.jpg',
+      price: 'Price on Enquiry'
+    },
+    {
+      id: 'churam-pass',
+      name: 'CHURAM DRIVE',
+      category: '9 Hairpins & Sunset Pass',
+      image: '/images/final_cta_road.jpg',
+      price: 'Price on Enquiry'
+    },
+    {
       id: 'soochipara-falls',
       name: 'SOOCHIPARA FALLS',
-      category: 'Rainforest Cascade',
+      category: 'Rainforest Cascade Pool',
       image: '/images/soochipara_waterfall.jpg',
+      price: 'Price on Enquiry'
+    },
+    {
+      id: 'karapuzha-dam',
+      name: 'KARAPUZHA DAM',
+      category: 'Adventure Park & Reservoir',
+      image: '/images/hero_wayanad_river.jpg',
       price: 'Price on Enquiry'
     }
   ];
@@ -45,10 +73,6 @@ export const TopPicks: React.FC<TopPicksProps> = ({
     <section className="section picks-section section-destinations" id="destinations">
       <div className="container">
         <div className="section-header">
-          <div className="badge-pill">
-            <span className="dot" />
-            <span>Curated Sightseeing</span>
-          </div>
           <h2 className="section-title">
             Top Picks in <em>Wayanad.</em>
           </h2>
