@@ -17,10 +17,6 @@ export const RouteVisualizer: React.FC = () => {
     <section className="section section-route-visualizer" id="churam-visualizer">
       <div className="container">
         <div className="section-header">
-          <div className="badge-pill">
-            <span className="dot" />
-            <span>Interactive Mountain Route</span>
-          </div>
           <h2 className="section-title">
             Ascending into the <em>Mist.</em>
           </h2>
