@@ -62,36 +62,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Bottom Floating Info Pill (Glassmorphic Bar with Official WhatsApp Icon) */}
         <div className="hero-bottom-info-pill">
           <div className="hero-pill-call-group">
-            <WhatsAppIcon variant="original" size={20} />
-            <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>WhatsApp:</span>
-            <a
-              href={buildWhatsAppUrl('6238813608')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="call-num"
-              title="Message Desk 1 on WhatsApp"
-            >
-              +91 62388 13608
-            </a>
-            <span className="divider-dot">•</span>
-            <a
-              href={buildWhatsAppUrl('8157845547')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="call-num"
-              title="Message Desk 2 on WhatsApp"
-            >
-              +91 81578 45547
-            </a>
+            <div className="hero-pill-call-label">
+              <WhatsAppIcon variant="original" size={18} />
+              <span className="hero-pill-wa-title">WhatsApp:</span>
+            </div>
+            <div className="hero-pill-phone-links">
+              <a
+                href={buildWhatsAppUrl('6238813608')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="call-num"
+                title="Message Desk 1 on WhatsApp"
+              >
+                +91 62388 13608
+              </a>
+              <span className="divider-dot">•</span>
+              <a
+                href={buildWhatsAppUrl('8157845547')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="call-num"
+                title="Message Desk 2 on WhatsApp"
+              >
+                +91 81578 45547
+              </a>
+            </div>
           </div>
 
           <div className="hero-pill-meta">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <MapPin size={14} color="var(--color-terracotta)" />
-              <span>Wayanad, Kerala, India</span>
+            <div className="hero-pill-location">
+              <MapPin size={13} color="var(--color-terracotta)" />
+              <span>Wayanad, Kerala</span>
             </div>
             <span className="divider-dot">•</span>
-            <span style={{ fontStyle: 'italic', fontWeight: 500 }}>
+            <span className="hero-pill-tagline">
               Led by Faith. Driven by Adventure.
             </span>
           </div>
@@ -102,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="btn btn-hero-explore btn-sm"
               aria-label="Explore tours and packages"
             >
-              <Compass size={14} />
+              <Compass size={13} />
               <span>Explore</span>
             </button>
             <button
