@@ -1,0 +1,72 @@
+:root {
+  /* Warm Editorial Travel Palette (Inspired by Reference 2) */
+  --bg-page: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-warm: #F4EFE6;
+  --bg-card: #FFFFFF;
+  --bg-card-muted: #F8F6F0;
+  --bg-glass-light: rgba(255, 255, 255, 0.85);
+  --bg-glass-dark: rgba(15, 29, 21, 0.78);
+  
+  /* Text & Contrast */
+  --text-headline: #0F1D15;
+  --text-body: #344239;
+  --text-muted: #6E7D73;
+  --text-light: #FAF8F5;
+  --text-white: #FFFFFF;
+
+  /* Terracotta / Sunset Rust Accent (Reference 2 Brand Accent) */
+  --color-terracotta: #D96B27;
+  --color-terracotta-light: #E57934;
+  --color-terracotta-dark: #BF581A;
+  --color-terracotta-subtle: rgba(217, 107, 39, 0.1);
+  --color-terracotta-glow: rgba(217, 107, 39, 0.28);
+
+  /* Deep Forest & Sage */
+  --color-forest: #14281E;
+  --color-forest-deep: #0B1711;
+  --color-sage: #5A7A68;
+  --color-sage-light: #DCE7DF;
+  --color-sage-subtle: rgba(90, 122, 104, 0.12);
+
+  /* WhatsApp Verified */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+  --color-whatsapp-glow: rgba(37, 211, 102, 0.28);
+
+  /* Borders & Dividers */
+  --border-light: #EAE5DC;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-accent: rgba(217, 107, 39, 0.35);
+
+  /* Typography */
+  --font-monumental: 'Syne', -apple-system, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 30px rgba(15, 29, 21, 0.06);
+  --shadow-hover: 0 16px 40px rgba(217, 107, 39, 0.14);
+  --shadow-floating: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-arch: 180px 180px 20px 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Containers */
+  --container-max: 1240px;
+  --container-wide: 1380px;
+  --container-narrow: 980px;
+}

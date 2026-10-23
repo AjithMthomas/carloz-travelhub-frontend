@@ -1,0 +1,1476 @@
+@import './design-tokens.css';
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ebe1;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4cbbd;
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ==========================================================================
+   Containers & Spacing
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.section {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  position: relative;
+}
+
+/* ==========================================================================
+   Typography & Editorial Section Headers
+   ========================================================================== */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem) auto;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terracotta);
+  background: var(--color-terracotta-subtle);
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+.badge-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--text-headline);
+  margin-bottom: 1rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--color-terracotta);
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Buttons (Inspired by Reference 2)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-terracotta {
+  background-color: var(--color-terracotta);
+  color: #ffffff;
+  box-shadow: 0 4px 16px var(--color-terracotta-glow);
+}
+
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(217, 107, 39, 0.35);
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 16px var(--color-whatsapp-glow);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-headline);
+  border: 1px solid var(--border-light);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.82rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 1.25rem 0;
+}
+
+.site-header.scrolled {
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.85rem 0;
+  box-shadow: var(--shadow-subtle);
+}
+
+.site-header.scrolled .brand-title,
+.site-header.scrolled .nav-link {
+  color: var(--text-headline);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  line-height: 1.1;
+  transition: color var(--transition-fast);
+}
+
+.brand-title span {
+  color: var(--color-terracotta);
+}
+
+.brand-tagline-sub {
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  color: #f7efe4;
+  line-height: 1;
+  display: block;
+}
+
+.site-header.scrolled .brand-tagline-sub {
+  color: var(--color-terracotta);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: color var(--transition-fast);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.site-header.scrolled .nav-link {
+  color: var(--text-headline);
+  text-shadow: none;
+}
+
+.nav-link:hover {
+  color: var(--color-terracotta) !important;
+}
+
+.mobile-toggle-btn {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.site-header.scrolled .mobile-toggle-btn {
+  background: var(--bg-surface-warm);
+  border-color: var(--border-light);
+  color: var(--text-headline);
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: #faf8f5;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-headline);
+}
+
+/* ==========================================================================
+   Section 01: Hero Poster (Matching Reference Image 1 "VIETNAM" Style)
+   ========================================================================== */
+.hero-poster {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6.5rem 1.5rem 2.5rem 1.5rem;
+  overflow: hidden;
+}
+
+.hero-poster-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-poster-vignette {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(to bottom, rgba(15, 29, 21, 0.5) 0%, rgba(15, 29, 21, 0.25) 40%, rgba(15, 29, 21, 0.65) 90%),
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(15, 29, 21, 0.4) 100%);
+}
+
+.hero-poster-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Top Meta Row in Hero (Reference 1 Top Layout) */
+.hero-poster-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.hero-beyond-borders {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hero-sub-caps {
+  font-family: var(--font-display);
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-underline-bar {
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: var(--radius-pill);
+}
+
+.hero-script-brand {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-script-logo {
+  font-family: var(--font-script);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  color: #ffffff;
+  line-height: 0.95;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.hero-script-sub {
+  font-family: var(--font-script);
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  color: #f7efe4;
+  line-height: 1;
+}
+
+/* Monumental Center Word (Exact match to Reference 1 "VIETNAM") */
+.hero-monumental-block {
+  text-align: center;
+  margin: auto 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-monumental-title {
+  font-family: var(--font-monumental);
+  font-size: clamp(4.5rem, 14vw, 12rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  user-select: none;
+  background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.75) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-poster-mid-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+.hero-diff-beautiful {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+/* Bottom Glass Floating Pill (Reference 1 Call/Info Bar) */
+.hero-bottom-info-pill {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-pill-call-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-headline);
+  font-weight: 600;
+}
+
+.hero-pill-call-group .call-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-terracotta);
+  transition: color var(--transition-fast);
+}
+
+.hero-pill-call-group .call-num:hover {
+  text-decoration: underline;
+}
+
+.hero-pill-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Section 02: Top Horizontal Pick Cards (Cloned from Reference 2 Top)
+   ========================================================================== */
+.picks-section {
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.pick-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.pick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-accent);
+}
+
+.pick-card-img-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  position: relative;
+}
+
+.pick-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.pick-card:hover .pick-card-img {
+  transform: scale(1.06);
+}
+
+.pick-card-body {
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pick-card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-headline);
+}
+
+.pick-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.pick-card-price {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+}
+
+.pick-card-circle-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.pick-card:hover .pick-card-circle-btn {
+  transform: rotate(-45deg) scale(1.08);
+}
+
+/* ==========================================================================
+   Section 03: "We create the trips you love" (Cloned from Reference 2 Split)
+   ========================================================================== */
+.create-trips-section {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.create-trips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.create-trips-photo-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 5;
+  position: relative;
+}
+
+.create-trips-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.create-trips-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-trips-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-headline);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.create-trips-lead {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.feature-pill-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-pill-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.35rem;
+  background: var(--bg-surface-warm);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.feature-pill-card:hover {
+  background: #ffffff;
+  border-color: var(--color-terracotta);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.feature-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-terracotta);
+  flex-shrink: 0;
+}
+
+.feature-pill-info h4 {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  margin-bottom: 0.15rem;
+}
+
+.feature-pill-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Section 04: "Awesome Wayanad" + Stats + Layered Photos (Reference 2)
+   ========================================================================== */
+.awesome-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.stats-counter-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-monumental);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.stat-desc {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.layered-photos-composition {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.layered-card-main {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 3 / 4;
+}
+
+.layered-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.layered-card-sub {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 3;
+}
+
+/* ==========================================================================
+   Section 05: "EXPLORE ALL TOURS" (Cloned from Reference 2 Page 2)
+   ========================================================================== */
+.tours-section {
+  background: var(--bg-surface-warm);
+}
+
+.tours-hero-banner {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tours-giant-title {
+  font-family: var(--font-monumental);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-headline);
+  line-height: 1;
+  margin-bottom: 1.75rem;
+}
+
+.tours-tabs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tour-tab-item {
+  padding: 0.65rem 1.45rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tour-tab-item.active, .tour-tab-item:hover {
+  background: var(--color-terracotta);
+  color: #ffffff;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 4px 14px var(--color-terracotta-glow);
+}
+
+.tours-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.tour-package-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.tour-package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-accent);
+}
+
+.tour-package-img-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  position: relative;
+}
+
+.tour-package-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.tour-package-card:hover .tour-package-img {
+  transform: scale(1.06);
+}
+
+.tour-package-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.tour-package-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-headline);
+  margin-bottom: 0.45rem;
+}
+
+.tour-meta-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Section 06: "WHICH ROUTE ARE YOU GONNA CHOOSE?" (Reference 2 Arch Doorways)
+   ========================================================================== */
+.doorways-section {
+  text-align: center;
+}
+
+.doorways-title {
+  font-family: var(--font-monumental);
+  font-size: clamp(1.8rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-headline);
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.doorways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.doorway-card {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-arch);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  border: 4px solid #ffffff;
+  transition: all var(--transition-normal);
+}
+
+.doorway-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+.doorway-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.doorway-card:hover .doorway-img {
+  transform: scale(1.08);
+}
+
+.doorway-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 29, 21, 0.9) 0%, rgba(15, 29, 21, 0.2) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.doorway-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.doorway-sub {
+  font-size: 0.82rem;
+  color: #f0e6d8;
+}
+
+/* ==========================================================================
+   Section 07: FAQs (Cloned from Reference 2)
+   ========================================================================== */
+.faqs-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: flex-start;
+}
+
+.faq-left-block {
+  position: sticky;
+  top: 6rem;
+}
+
+.faq-card-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-card-item.open {
+  border-color: var(--color-terracotta);
+  box-shadow: var(--shadow-subtle);
+}
+
+.faq-btn {
+  width: 100%;
+  padding: 1.15rem 1.35rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 0 1.35rem 1.25rem 1.35rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Section 08: "Tailor Made Trip" Card (Cloned from Reference 2 Sunset Card)
+   ========================================================================== */
+.tailor-made-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 21 / 9;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.tailor-made-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tailor-made-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(15, 29, 21, 0.92) 0%, rgba(15, 29, 21, 0.45) 50%, transparent 100%);
+}
+
+.tailor-made-content {
+  position: relative;
+  z-index: 5;
+  max-width: 500px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.tailor-made-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.tailor-made-desc {
+  font-size: 0.95rem;
+  color: #e5ded5;
+  margin-bottom: 1.75rem;
+}
+
+/* ==========================================================================
+   Trip Planner Multi-Step (Interactive & WhatsApp Routing)
+   ========================================================================== */
+.planner-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.step-indicator-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.step-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border-light);
+  z-index: 1;
+}
+
+.step-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background: var(--color-terracotta);
+  z-index: 2;
+  transition: width var(--transition-normal);
+}
+
+.step-badge-node {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 3;
+}
+
+.step-badge-node.active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #ffffff;
+  box-shadow: 0 0 14px var(--color-terracotta-glow);
+}
+
+.step-badge-node.done {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: #ffffff;
+}
+
+.tile-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tile-choice {
+  background: var(--bg-surface-warm);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tile-choice:hover {
+  border-color: var(--color-terracotta);
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.tile-choice.selected {
+  background: #ffffff;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 4px 18px var(--color-terracotta-subtle);
+}
+
+.tile-choice.selected .tile-title {
+  color: var(--color-terracotta);
+}
+
+.tile-title {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-headline);
+}
+
+.tile-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.dest-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.dest-tag-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--bg-surface-warm);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.dest-tag-card.selected {
+  background: #ffffff;
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-headline);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 10px var(--color-terracotta-subtle);
+}
+
+/* ==========================================================================
+   Footer (Cloned from Reference 2 Clean Footer)
+   ========================================================================== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+  padding-bottom: 2.5rem;
+}
+
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 3.5rem;
+}
+
+.footer-col-head {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-headline);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-link {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-terracotta);
+}
+
+.footer-contact-item {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   Floating WhatsApp Multi-Desk Bubble
+   ========================================================================== */
+.floating-wa-wrap {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.floating-wa-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: transform var(--transition-normal);
+}
+
+.floating-wa-btn:hover {
+  transform: scale(1.08) rotate(6deg);
+}
+
+.floating-wa-menu {
+  position: absolute;
+  bottom: 68px;
+  right: 0;
+  width: 290px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-floating);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.floating-wa-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-surface-warm);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.floating-wa-option:hover {
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-toggle-btn {
+    display: block;
+  }
+  .picks-grid,
+  .tours-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .create-trips-grid,
+  .awesome-story-grid,
+  .faqs-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .doorways-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-poster-top-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .hero-script-brand {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .hero-bottom-info-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+  }
+  .picks-grid,
+  .tours-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .layered-photos-composition {
+    grid-template-columns: 1fr;
+  }
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
